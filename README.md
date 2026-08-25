@@ -1,8 +1,9 @@
 # Project Description
 
-KubeIncident is a Kubernetes-native distributed incident detection and log analysis platform, designed to demonstrate production-style cloud and platform engineering practices.
+KubeIncident is a Kubernetes-native incident detection and log-analysis platform that collects structured JSON logs from distributed workloads, identifies and correlates failure patterns, deduplicates alerts, and automatically creates evidence-backed incidents with severity and likely root cause. 
 
-The platform collects and analyzes structured application logs from distributed workloads
+Built with FastAPI, Go, PostgreSQL, Redis, Prometheus, and Grafana, the platform runs on Kubernetes and includes a custom controller for monitoring and safe remediation. Infrastructure and delivery are automated using Terraform, Helm, GitHub Actions, and AWS EKS, demonstrating production-focused platform engineering, observability, asynchronous processing, and incident response.
+
 
 ## Objectives
 - Design a small distributed system
