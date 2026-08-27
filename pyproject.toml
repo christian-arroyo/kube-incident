@@ -1,0 +1,18 @@
+[project]
+name = "kube-incident"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.141.1",
+    "pydantic>=2.13.4",
+    "pytest>=9.1.1",
+    "uvicorn>=0.52.4",
+]
+authors = {name = "Christian Arroyo"}
+
+[tool.fastapi]
+entrypoint = "app.main:app"
+
+[tool.pytest.ini_options]
+pythonpath = "."
