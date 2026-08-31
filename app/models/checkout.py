@@ -12,8 +12,8 @@ class CheckoutResponseModel(BaseModel):
 
 # Request body when creating a checkout
 class CheckoutRequestModel(BaseModel):
-    user_id: int
-    items: list[dict]
+    user_id: str
+    items: list[ItemModel]
     subtotal: Decimal
     tax_rate: Decimal
 
@@ -21,3 +21,8 @@ class CheckoutStatusEnum(str, Enum):
     PENDING = "PENDING"
     COMPLETED = "COMPLETED"
     CANCELLED = "CANCELLED"
+
+class ItemModel(BaseModel):
+    item_number: int
+    price: Decimal
+    description: str

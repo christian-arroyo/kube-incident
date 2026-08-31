@@ -19,9 +19,9 @@ class CheckoutService:
         return tax.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
 
     def _change_checkout_status(self, checkout_id: str, status: CheckoutStatusEnum) -> CheckoutResponseModel:
-            checkout = self.get_checkout(checkout_id)
-            checkout.status = status
-            return checkout
+        checkout = self.get_checkout(checkout_id)
+        checkout.status = status
+        return checkout
 
     def _generate_checkout_id(self, data: dict) -> str:
         id = "checkout-" + str(len(data))
