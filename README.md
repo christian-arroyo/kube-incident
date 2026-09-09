@@ -8,7 +8,7 @@ Built with FastAPI, Go, PostgreSQL, Redis, Prometheus, and Grafana, the platform
 ## Objectives
 - Design a small distributed system
 - Write production-oriented Python services and learn Go for Kubernates-native software
-- Containerize, deploy, configuure, secure, observe, scale, and troubleshoot workloads in K8s
+- Containerize, deploy, configure, secure, observe, scale, and troubleshoot workloads in K8s
 - Collect operational telemetry and turn raw logs/metrics/events into useful incident evidence
 - Use Terraform, Helm, and CI/CD to make infrastructure and deployment repeatable
 - Intentionally create failures, investigate them systematically, recover the service, and write an RCA

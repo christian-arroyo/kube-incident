@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    ports:
+    - "8000:8000"
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: salesdb
+    ports:
+      - "5432:5432"
