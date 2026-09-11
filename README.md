@@ -1,14 +1,7 @@
-# Project Description
+# Project Description (Work in progress)
 
-KubeIncident is a Kubernetes-native incident detection and log-analysis platform that collects structured JSON logs from distributed workloads, identifies and correlates failure patterns, deduplicates alerts, and automatically creates evidence-backed incidents with severity and likely root cause. 
+KubeCommerce is a cloud-native e-commerce application built to demonstrate production-level DevOps and platform engineering practices. The application provides a realistic distributed workload composed of a checkout API written in Python/FastAPI, and a Go payment service. The services generate structured logs, metrics, and distributed traces while processing checkout and simulated payment requests, including successful transactions, declines, delays, and failures.
 
-Built with FastAPI, Go, PostgreSQL, Redis, Prometheus, and Grafana, the platform runs on Kubernetes and includes a custom controller for monitoring and safe remediation. Infrastructure and delivery are automated using Terraform, Helm, GitHub Actions, and AWS EKS, demonstrating production-focused platform engineering, observability, asynchronous processing, and incident response.
+The platform is containerized with Docker and deployed to Kubernetes with Helm. The underlying infrastructure is provisioned through Terraform. Github Actions automates testing, security scanning, image creation, and deployment. In regards to observability, I use Prometheus, Grafana, and OpenTelemetry. On the Kubernetes side, I use health probes, resource limits, autoscaling, RBAC, NetworkPolicies, and Gateway API resources to demonstrate production-oriented reliability and security.
 
-
-## Objectives
-- Design a small distributed system
-- Write production-oriented Python services and learn Go for Kubernates-native software
-- Containerize, deploy, configure, secure, observe, scale, and troubleshoot workloads in K8s
-- Collect operational telemetry and turn raw logs/metrics/events into useful incident evidence
-- Use Terraform, Helm, and CI/CD to make infrastructure and deployment repeatable
-- Intentionally create failures, investigate them systematically, recover the service, and write an RCA
+To test the functionality of each of the components, and to practice monitoring, alerting, and troubleshooting, I induce controlled failures. Failures consist of database outages, payment errors, increased latency, CPU saturation, and queue backlogs.
